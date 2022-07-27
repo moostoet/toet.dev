@@ -7,17 +7,12 @@
         mdiCardAccountDetails,
     } from "@mdi/js";
     import { tweened } from "svelte/motion";
+    import AboutMe from "./lib/AboutMe.svelte";
 
-    //variable dateToVienna: 14th August, 2022, 13:25 PM
     let dateToVienna = new Date(2022, 7, 14, 13, 25);
-
-    //convert dateToVienna to seconds
     let dateToViennaInSeconds = dateToVienna.getTime() / 1000;
-
-    //get curent date and count down to dateToViennaInSeconds
     let currentDate = new Date();
     let currentDateInSeconds = currentDate.getTime() / 1000;
-
     let timeLeft = dateToViennaInSeconds - currentDateInSeconds;
 
     let timer = tweened(timeLeft);
@@ -32,6 +27,12 @@
     $: seconds = Math.floor(
         $timer - days * 86400 - hours * 3600 - minutes * 60
     );
+
+    let componentToShow = "";
+
+    function changeComponentToShow(component) {
+        componentToShow = component;
+    }
 </script>
 
 <main>
@@ -48,7 +49,7 @@
             </p>
         </div>
         <div
-            class="bg-container-dark/70 rounded-lg flex w-1/2 divide-x divide-slate-600 text-center font-bold shadow-md shadow-shadow"
+            class="bg-container-dark/70 rounded-lg flex flex-col md:flex-row w-1/2 divide-y md:divide-x md:divide-y-0 divide-slate-600 text-center font-bold shadow-md shadow-shadow"
         >
             <button
                 class="flex flex-row items-center rounded-l-lg justify-center w-full gap-3 flex-1 p-3 hover:bg-container-hover transition"
@@ -77,6 +78,8 @@
                 <p>Click one of the buttons above to learn more about me!</p>
             </header>
         </div>
-		<p class="text-sm opacity-50">This site is still a work-in-progress! 🏗️</p>
+        <p class="text-sm opacity-50">
+            This site is still a work-in-progress! 🏗️
+        </p>
     </div>
 </main>
