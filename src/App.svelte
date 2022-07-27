@@ -26,7 +26,6 @@
 
     let isTransitioning = false;
 
-    //create a function startTransition(ms)
     function startTransition(ms) {
         isTransitioning = true;
         setTimeout(() => {
@@ -57,7 +56,7 @@
             >
                 <p>Made with</p>
                 <img
-                    src="../public/Svelte_Logo.svg"
+                    src="/Svelte_Logo.svg"
                     alt=""
                     class="w-8 h-8 opacity-20"
                     style="filter: invert(9%) sepia(11%) saturate(2234%) hue-rotate(185deg) brightness(95%) contrast(93%);"
