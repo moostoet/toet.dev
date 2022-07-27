@@ -12,6 +12,7 @@ module.exports = {
         'primary-dark': '#0F172A',
         'background-dark': '#0F172A',
         'container-dark': '#202535',
+        'container-hover': '#2D447C',
       }
     },
   },
