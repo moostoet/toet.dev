@@ -52,7 +52,7 @@
             class="bg-container-dark/70 rounded-lg flex flex-col md:flex-row w-1/2 divide-y md:divide-x md:divide-y-0 divide-slate-600 text-center font-bold shadow-md shadow-shadow"
         >
             <button
-                class="flex flex-row items-center rounded-t-lg md:rounded-l-lg justify-center w-full gap-3 flex-1 p-3 hover:bg-container-hover transition"
+                class="flex flex-row items-center rounded-tr-lg rounded-tl-lg md:rounded-l-lg md:rounded-tr-none justify-center w-full gap-3 flex-1 p-3 hover:bg-container-hover transition"
             >
                 <Icon path={mdiAccountQuestion} color="white" />
                 <p>Who am I?</p>
@@ -64,7 +64,7 @@
                 <p>My projects</p>
             </button>
             <button
-                class="flex flex-row items-center rounded-b-lg md:rounded-r-lg justify-center w-full gap-3 flex-1 p-3 hover:bg-container-hover transition"
+                class="flex flex-row items-center rounded-br-lg rounded-bl-lg md:rounded-r-lg md:rounded-bl-none justify-center w-full gap-3 flex-1 p-3 hover:bg-container-hover transition"
             >
                 <Icon path={mdiCardAccountDetails} color="white" />
                 <p>My socials</p>
