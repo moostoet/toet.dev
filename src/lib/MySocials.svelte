@@ -8,5 +8,5 @@
     in:fly={{ duration: 800, easing: quintOut, x: 200 }}
     out:fly={{ duration: 800, easing: quintOut, x: -200 }}
 >
-    About Me works!
+    My Socials works!
 </div>
