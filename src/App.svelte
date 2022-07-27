@@ -73,39 +73,45 @@
             class="bg-container-dark/70 rounded-lg flex flex-col md:flex-row w-1/2 divide-y md:divide-x md:divide-y-0 divide-slate-600 text-center font-bold shadow-md shadow-shadow"
         >
             <button
-                class="disabled:opacity-10 flex flex-row items-center rounded-tr-lg rounded-tl-lg md:rounded-l-lg md:rounded-tr-none justify-center w-full gap-3 flex-1 p-3 hover:bg-container-hover transition"
+                class="disabled:opacity-10 {currentComponent === 0
+                    ? 'outline outline-2 outline-button-selected'
+                    : ''} flex flex-row items-center rounded-tr-lg rounded-tl-lg md:rounded-l-lg md:rounded-tr-none justify-center w-full gap-3 flex-1 p-3 hover:bg-container-hover transition"
                 disabled={isTransitioning}
                 on:click={() => {
                     if (currentComponent != 0) {
-						currentComponent = 0;
-						startTransition(800);
-					}
+                        currentComponent = 0;
+                        startTransition(800);
+                    }
                 }}
             >
                 <Icon path={mdiAccountQuestion} color="white" />
                 <p>Who am I?</p>
             </button>
             <button
-                class="disabled:opacity-10 flex flex-row items-center justify-center w-full gap-3 flex-1 p-3 hover:bg-container-hover transition"
+                class="disabled:opacity-10 {currentComponent === 1
+                    ? 'outline outline-2 outline-button-selected'
+                    : ''} flex flex-row items-center justify-center w-full gap-3 flex-1 p-3 hover:bg-container-hover transition"
                 disabled={isTransitioning}
                 on:click={() => {
-					if (currentComponent != 1) {
-						currentComponent = 1;
-						startTransition(800);
-					}
+                    if (currentComponent != 1) {
+                        currentComponent = 1;
+                        startTransition(800);
+                    }
                 }}
             >
                 <Icon path={mdiFileDocumentMultiple} color="white" />
                 <p>My projects</p>
             </button>
             <button
-                class="disabled:opacity-10  flex flex-row items-center rounded-br-lg rounded-bl-lg md:rounded-r-lg md:rounded-bl-none justify-center w-full gap-3 flex-1 p-3 hover:bg-container-hover transition"
+                class="disabled:opacity-10 {currentComponent === 2
+                    ? 'outline outline-2 outline-button-selected'
+                    : ''} flex flex-row items-center rounded-br-lg rounded-bl-lg md:rounded-r-lg md:rounded-bl-none justify-center w-full gap-3 flex-1 p-3 hover:bg-container-hover transition"
                 disabled={isTransitioning}
                 on:click={() => {
                     if (currentComponent != 2) {
-						currentComponent = 2;
-						startTransition(800);
-					}
+                        currentComponent = 2;
+                        startTransition(800);
+                    }
                 }}
             >
                 <Icon path={mdiCardAccountDetails} color="white" />

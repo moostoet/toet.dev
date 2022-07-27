@@ -13,6 +13,7 @@ module.exports = {
         'background-dark': '#0F172A',
         'container-dark': '#202535',
         'container-hover': '#2D447C',
+        'button-selected': '#4B5C8B',
         'shadow': '#0C1322',
       }
     },
