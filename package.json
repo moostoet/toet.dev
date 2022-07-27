@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
+    "preview": "HOST=0.0.0.0 vite preview --host",
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
