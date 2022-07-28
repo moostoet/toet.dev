@@ -6,11 +6,12 @@
         mdiCardAccountDetails,
     } from "@mdi/js";
     import { tweened } from "svelte/motion";
-    import { slide } from "svelte/transition";
+    import { fade, fly, slide } from "svelte/transition";
     import AboutMe from "./lib/AboutMe.svelte";
     import MyProjects from "./lib/MyProjects.svelte";
     import MySocials from "./lib/MySocials.svelte";
     import Panels from "./lib/Panels.svelte";
+import { quintOut } from "svelte/easing";
 
     const components = [AboutMe, MyProjects, MySocials];
 
@@ -49,7 +50,7 @@
     <div
         class="h-screen w-screen flex flex-col gap-5 items-center justify-center relative bg-gradient-to-r from-primary-dark to-black"
     >
-        <div class="absolute top-5 left-5">
+        <div class="absolute top-5 left-5 z-50">
             <p class="text-container-hover font-medium text-md">toet.dev</p>
             <div
                 class="text-container-hover text-xs flex flex-row items-center gap-1"
@@ -70,12 +71,12 @@
             </p>
         </div>
         <div
-            class="bg-container-dark/70 rounded-lg flex flex-col md:flex-row w-1/2 divide-y md:divide-x md:divide-y-0 divide-slate-600 text-center font-bold shadow-md shadow-shadow"
+            class="sticky top-0 z-10 w-screen bg-container-dark md:bg-container-dark/70 md:rounded-lg flex flex-col md:flex-row md:w-1/2 divide-y md:divide-x md:divide-y-0 divide-slate-600 text-center font-bold shadow-md shadow-shadow"
         >
             <button
                 class="disabled:opacity-10 {currentComponent === 0
                     ? 'outline outline-2 outline-button-selected'
-                    : ''} flex flex-row items-center rounded-tr-lg rounded-tl-lg md:rounded-l-lg md:rounded-tr-none justify-center w-full gap-3 flex-1 p-3 hover:bg-container-hover transition"
+                    : ''} flex flex-row items-center md:rounded-l-lg md:rounded-tr-none justify-center w-full gap-3 flex-1 p-3 hover:bg-container-hover transition"
                 disabled={isTransitioning}
                 on:click={() => {
                     if (currentComponent != 0) {
@@ -105,7 +106,7 @@
             <button
                 class="disabled:opacity-10 {currentComponent === 2
                     ? 'outline outline-2 outline-button-selected'
-                    : ''} flex flex-row items-center rounded-br-lg rounded-bl-lg md:rounded-r-lg md:rounded-bl-none justify-center w-full gap-3 flex-1 p-3 hover:bg-container-hover transition"
+                    : ''} flex flex-row items-center md:rounded-r-lg md:rounded-bl-none justify-center w-full gap-3 flex-1 p-3 hover:bg-container-hover transition"
                 disabled={isTransitioning}
                 on:click={() => {
                     if (currentComponent != 2) {
@@ -118,14 +119,18 @@
                 <p>My socials</p>
             </button>
         </div>
-        <div
-            class="bg-container-dark/70 backdrop-blur-md p-5 w-1/2 rounded-lg shadow-md shadow-shadow"
-        >
-            <header class="w-full flex flex-col items-center gap-3">
-                <p class="font-bold text-xl">Hey there. 👋</p>
-                <p>Click one of the buttons above to learn more about me!</p>
-            </header>
-        </div>
+        {#if currentComponent === -1}
+            <div
+                class="bg-container-dark/70 backdrop-blur-md p-5 w-3/4 md:w-1/2 rounded-lg shadow-md shadow-shadow"
+            >
+                <header class="w-full flex flex-col items-center gap-3">
+                    <p class="font-bold text-xl">Hey there. 👋</p>
+                    <p>
+                        Click one of the buttons above to learn more about me!
+                    </p>
+                </header>
+            </div>
+        {/if}
         <!-- <svelte:component this={components[currentComponent]} /> -->
         <Panels bind:currentComponent />
         <p class="text-sm opacity-50">

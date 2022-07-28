@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    html {
+        @apply h-screen w-screen flex flex-col gap-5 items-center justify-center relative bg-gradient-to-r from-primary-dark to-black
+    }
+}
+
 :root {
     font-size: 16px;
     line-height: 24px;
