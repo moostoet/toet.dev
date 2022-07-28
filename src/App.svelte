@@ -11,7 +11,7 @@
     import MyProjects from "./lib/MyProjects.svelte";
     import MySocials from "./lib/MySocials.svelte";
     import Panels from "./lib/Panels.svelte";
-import { quintOut } from "svelte/easing";
+    import { quintOut } from "svelte/easing";
 
     const components = [AboutMe, MyProjects, MySocials];
 
@@ -56,12 +56,13 @@ import { quintOut } from "svelte/easing";
                 class="text-container-hover text-xs flex flex-row items-center gap-1"
             >
                 <p>Made with</p>
-                <img
-                    src="/Svelte_Logo.svg"
-                    alt=""
-                    class="w-8 h-8 opacity-20"
-                    style="filter: invert(9%) sepia(11%) saturate(2234%) hue-rotate(185deg) brightness(95%) contrast(93%);"
-                />
+                <a href="https://svelte.dev/" target="_blank">
+                    <img
+                        src="/Svelte_Logo.svg"
+                        alt="Svelte logo"
+                        class="w-8 h-8 opacity-20 hover:opacity-100 filter transition"
+                    />
+                </a>
             </div>
         </div>
         <div class="flex flex-col items-center absolute top-5 right-5">
@@ -138,3 +139,14 @@ import { quintOut } from "svelte/easing";
         </p>
     </div>
 </main>
+
+<style>
+    .filter {
+        filter: invert(9%) sepia(11%) saturate(2234%) hue-rotate(185deg)
+            brightness(95%) contrast(93%);
+    }
+
+    .filter:hover {
+        filter: none;
+    }
+</style>
