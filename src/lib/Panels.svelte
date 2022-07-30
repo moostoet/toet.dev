@@ -9,7 +9,7 @@
     export let currentComponent;
 </script>
 
-<div class="transition-container w-3/4 md:w-1/2 ">
+<div class="transition-container w-screen md:w-1/2 ">
     {#if currentComponent == 0}
         <div>
             <AboutMe/>

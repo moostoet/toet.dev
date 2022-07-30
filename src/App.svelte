@@ -122,7 +122,7 @@
         </div>
         {#if currentComponent === -1}
             <div
-                class="bg-container-dark/70 backdrop-blur-md p-5 w-3/4 md:w-1/2 rounded-lg shadow-md shadow-shadow"
+                class="bg-container-dark/70 backdrop-blur-md p-5 w-screen md:w-1/2 rounded-lg shadow-md shadow-shadow"
             >
                 <header class="w-full flex flex-col items-center gap-3">
                     <p class="font-bold text-xl">Hey there. 👋</p>
