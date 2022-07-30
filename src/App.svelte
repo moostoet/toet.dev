@@ -48,7 +48,7 @@
 
 <main>
     <div
-        class="h-screen w-screen flex flex-col gap-5 items-center justify-center relative bg-gradient-to-r from-primary-dark to-black"
+        class="h-screen w-screen flex flex-col gap-5 items-center relative bg-gradient-to-r from-primary-dark to-black"
     >
         <div class="absolute top-5 left-5 z-50">
             <p class="text-container-hover font-medium text-md">toet.dev</p>
@@ -72,7 +72,7 @@
             </p>
         </div>
         <div
-            class="sticky top-0 z-10 w-screen bg-container-dark md:bg-container-dark/70 md:rounded-lg flex flex-col md:flex-row md:w-1/2 divide-y md:divide-x md:divide-y-0 divide-slate-600 text-center font-bold shadow-md shadow-shadow"
+            class="sticky mt-24 top-0 z-10 w-screen bg-container-dark md:bg-container-dark/70 md:rounded-lg flex flex-col md:flex-row md:w-1/2 divide-y md:divide-x md:divide-y-0 divide-slate-600 text-center font-bold shadow-md shadow-shadow"
         >
             <button
                 class="disabled:opacity-10 {currentComponent === 0
