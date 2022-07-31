@@ -10,6 +10,7 @@
         mdiNodejs
     } from "@mdi/js";
     import SkillProgress from "./SkillProgress.svelte";
+    import MySkills from "./reusables/MySkills.svelte";
 
     let myDateOfBirth = new Date(2002, 3, 1);
     let currentDate = new Date();
@@ -105,38 +106,7 @@
                 <p class="opacity-50">Per language / framework</p>
             </header>
             <main class="p-3">
-                <div class="flex flex-col gap-3">
-                    <div class="flex flex-row items-center gap-2 w-full">
-                        <Icon size={2} path={mdiLanguageJavascript} />
-                        <SkillProgress
-                            bind:progress={skillLevels.javaScript.progress}
-                        />
-                    </div>
-                    <div class="flex flex-row items-center gap-2 w-full">
-                        <Icon size={2} path={mdiLanguageTypescript} />
-                        <SkillProgress
-                            bind:progress={skillLevels.typeScript.progress}
-                        />
-                    </div>
-                    <div class="flex flex-row items-center gap-2 w-full">
-                        <Icon size={2} path={mdiVuejs} />
-                        <SkillProgress
-                            bind:progress={skillLevels.vue.progress}
-                        />
-                    </div>
-                    <div class="flex flex-row items-center gap-2 w-full">
-                        <Icon size={2} path={mdiAngular} />
-                        <SkillProgress
-                            bind:progress={skillLevels.angular.progress}
-                        />
-                    </div>
-                    <div class="flex flex-row items-center gap-2 w-full">
-                        <Icon size={2} path={mdiNodejs} />
-                        <SkillProgress
-                            bind:progress={skillLevels.nodeJs.progress}
-                        />
-                    </div>
-                </div>
+                <MySkills/>
                 <div class="mt-5">
                     <button
                     class="border max-w-max px-4 py-1 uppercase text-xs font-bold rounded-md hover:bg-button-selected transition"
