@@ -21,7 +21,7 @@ export const skillDataFrontEnd = {
             title: "JavaScript & TypeScript",
             experience: "Proficient (4-5 years experience)",
             description:
-                "I have a large amount of experience with both JavaScript and TypeScript and use them in my day-to-day programming work. I have recently come to use TypeScript more often for its strict typing and consistency. My strengths with these languages is in combination with Javscript frameworks such as Vue and Angular.",
+                "I have a large amount of experience with both JavaScript and TypeScript and use them in my day-to-day programming work. I have recently come to use TypeScript more often for its strict typing and consistency. My strengths with these languages is in combination with Javascript frameworks such as Vue and Angular.",
             icons: [
                 {
                     path: mdiLanguageJavascript,
