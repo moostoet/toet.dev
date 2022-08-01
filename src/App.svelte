@@ -134,9 +134,6 @@
         {/if}
         <!-- <svelte:component this={components[currentComponent]} /> -->
         <Panels bind:currentComponent />
-        <p class="text-sm opacity-50">
-            This site is still a work-in-progress! 🏗️
-        </p>
     </div>
 </main>
 
