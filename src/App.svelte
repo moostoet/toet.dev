@@ -65,12 +65,12 @@
                 </a>
             </div>
         </div>
-        <div class="flex flex-col items-center absolute top-5 right-5">
+        <!-- <div class="flex flex-col items-center absolute top-5 right-5">
             <p class="text-xl font-bold">Time until Vienna:</p>
             <p class="text-3xl font-bold text-blue-200">
                 {days}d : {hours}h : {minutes}m : {seconds}s
             </p>
-        </div>
+        </div> -->
         <div
             class="sticky mt-24 top-0 z-10 w-screen bg-container-dark md:bg-container-dark/70 md:rounded-lg flex flex-col md:flex-row md:w-1/2 divide-y md:divide-x md:divide-y-0 divide-slate-600 text-center font-bold shadow-md shadow-shadow"
         >
